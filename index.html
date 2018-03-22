@@ -10,56 +10,69 @@
   </head>
   <body>
     <div class="container">
-      <h1>Magical Chord Generator</h1>
-      <form id="notescaleinput">
-        <h5>Note:</h5>
-          <select class="note">
-            <option>A</option>
-            <option>A#</option>
-            <option>B</option>
-            <option>C</option>
-            <option>C#</option>
-            <option>D</option>
-            <option>D#</option>
-            <option>E</option>
-            <option>F</option>
-            <option>F#</option>
-            <option>G</option>
-            <option>G#</option>
-          </select>
-        <h5>Scale:</h5>
-          <select class="scale">
-            <option>Major</option>
-            <option>Dorian</option>
-            <option>Phrygian</option>
-            <option>Lydian</option>
-            <option>Mixolydian</option>
-            <option>Minor</option>
-            <option>Locrian</option>
-          </select>
-        <button type="submit" class="btn btn-danger">Submit</button>
-      </form>
-      <div class="results">
-        <table style="width: 100%">
-          <tr>
-            <th>I</th>
-            <th>II</th>
-            <th>III</th>
-            <th>IV</th>
-            <th>V</th>
-            <th>VI</th>
-            <th>VII</th>
-          </tr>
-          <tr>
-            <th><span id="I"></span></th>
-            <th><span id="II"></span></th>
-            <th><span id="III"></span></th>
-            <th><span id="IV"></span></th>
-            <th><span id="V"></span></th>
-            <th><span id="VI"></span></th>
-            <th><span id="VII"></span></th>
-          </tr>
-        </table>
+      <div class="row">
+        <div class="col-md-12">
+          <h1>Magical Chord Generator</h1>
+          <form id="notescaleinput">
+            <h5>Note:</h5>
+            <select class="note">
+              <option>A</option>
+              <option>A#</option>
+              <option>B</option>
+              <option>C</option>
+              <option>C#</option>
+              <option>D</option>
+              <option>D#</option>
+              <option>E</option>
+              <option>F</option>
+              <option>F#</option>
+              <option>G</option>
+              <option>G#</option>
+            </select>
+            <h5>Scale:</h5>
+            <select class="scale">
+              <option>Major</option>
+              <option>Dorian</option>
+              <option>Phrygian</option>
+              <option>Lydian</option>
+              <option>Mixolydian</option>
+              <option>Minor</option>
+              <option>Locrian</option>
+            </select>
+            <button type="submit" class="btn btn-danger">Submit</button>
+          </form>
+        </div>
+        <div class="results">
+          <div class="col-md-1">
+            <h4>I</h4>
+            <span id="noteI"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>II</h4>
+            <span id="noteII"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>III</h4>
+            <span id="noteIII"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>IV</h4>
+            <span id="noteIV"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>V</h4>
+            <span id="noteV"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>VI</h4>
+            <span id="noteVI"></span>
+          </div>
+          <div class="col-md-1">
+            <h4>VII</h4>
+            <span id="noteVII"></span>
+          </div>
+
+        </div>
       </div>
     </div>
   </body>
