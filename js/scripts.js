@@ -155,7 +155,7 @@ $(document).ready(function() {
     v.iiArray();
     vi.iiiArray();
     vii.ivArray();
-  } else if (scaleInput === "Aeolian") {
+  } else if (scaleInput === "Minor") {
     i.viArray();
     ii.viiArray();
     iii.iArray();
