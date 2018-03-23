@@ -6,7 +6,25 @@
   font-size: 20px;
 }
 
+table {
+  padding-left: 20px;
+  padding-right: 20px;
+}
 
+td {
+  border-top: 1px dotted black;
+  border-bottom: 1px dotted black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+th {
+  border: 1px;
+  padding-right: 20px;
+  text-align: right;
+}
 
 .results {
   display: none;
