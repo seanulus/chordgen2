@@ -1,3 +1,13 @@
+#chordsI, #chordsII, #chordsIII, #chordsIV, #chordsV, #chordsVI, #chordsVII {
+  text
+}
+
+#noteI, #noteII, #noteIII, #noteIV, #noteV, #noteVI, #noteVII {
+  font-size: 20px;
+}
+
+
+
 .results {
   display: none;
 }

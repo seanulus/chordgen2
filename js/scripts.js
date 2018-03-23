@@ -19,38 +19,32 @@ function scaleMachine(chromaticNotes, scaleInput) {
       if (i === 1 || i === 3 || i === 6 || i === 8 || i === 10) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Dorian") {
+  } else if (scaleInput === "Dorian") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 1 || i === 4 || i === 6 || i === 8 || i === 11) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Phrygian") {
+  } else if (scaleInput === "Phrygian") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 2 || i === 4 || i === 6 || i === 9 || i === 11) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Lydian") {
+  } else if (scaleInput === "Lydian") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 1 || i === 3 || i === 5 || i === 8 || i === 10) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Mixolydian") {
+  } else if (scaleInput === "Mixolydian") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 1 || i === 3 || i === 6 || i === 8 || i === 11) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Minor") {
+  } else if (scaleInput === "Minor") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 1 || i === 4 || i === 6 || i === 9 || i === 11) { continue; }
         newScale.push(chromaticNotes[i]);
     } return newScale;
-  }
-  else if (scaleInput === "Locrian") {
+  } else if (scaleInput === "Locrian") {
     for (var i = 0; i < 12; i += 1) {
       if (i === 2 || i === 4 || i === 7 || i === 9 || i === 11) { continue; }
         newScale.push(chromaticNotes[i]);
@@ -58,80 +52,143 @@ function scaleMachine(chromaticNotes, scaleInput) {
   }
 }
 
-// function triadsMachine(scaleInput) {
-//     var triadChords = ["maj", "min", "min", "maj", "maj", "min", "dim"];
-//     var seventhChords = ["maj7", "min7", "min7", "maj7", "7", "min7", "min7(b5)"];
-//     var ninthChords = ["maj9", "min9", "min7(b9)", "maj9", "9", "min9", "min7(b5, b9)"];
-//     var eleventhChords = ["maj11", "min11", "min11(b9)", "maj9(#11)", "11", "min11", "min11(b5, b9)"]
-//     var thirteenthChords = ["maj13", "min13", "min11 (b9, b13)", "maj13(#11)", "13", "min11(b13)", "min11(b5, b9, b13)"]
-//
-//     var triads = [];
-//
-//     if (scaleInput === "Major") {
-//     for (var i = 0; i < 12; i += 1) {
-//       if (i === 1 || i === 3 || i === 6 || i === 8 || i === 10) { continue; }
-//         triads.push(chromaticNotes[i]);
-//     } return triads;
-//   }
+function chordObject(noteName) {
+  this.noteName = noteName;
+  this.chords = [];
+}
 
-  function newObject(noteName, chordNumber) {
-    this.noteName = noteName;
-    this.chordNumber = chordNumber;
-    this.chords = [];
-  }
+chordObject.prototype.iArray = function() {
+  this.chords.push(scaleChords.i);
+}
 
-  function scaleDegreeMachine(newScale) {
-    var i = new newObject(newScale[0], "I")
-    var ii = new newObject(newScale[1], "II")
-    var iii = new newObject(newScale[2], "III")
-    var iv = new newObject(newScale[3], "VI")
-    var v = new newObject(newScale[4], "V")
-    var vi = new newObject(newScale[5], "VI")
-    var vii = new newObject(newScale[6], "VII")
+chordObject.prototype.iiArray = function() {
+  this.chords.push(scaleChords.ii);
+}
 
-    return i, ii, iii, iv, v, vi, vii
-  }
+chordObject.prototype.iiiArray = function() {
+  this.chords.push(scaleChords.iii);
+}
 
-  var chordNumber = {
-    i: ["maj", "maj7", "maj9", "maj11", "maj13"],
-    ii: ["min", "min7", "min9", "min11", "min13"],
-    iii: ["min", "min7", "min7(b9)", "min11(b9)", "min11 (b9, b13)"],
-    iv: ["maj", "maj7", "maj9", "maj9(#11)", "maj13(#11)"],
-    v: ["maj", "7", "9", "11", "13"],
-    vi: ["min", "min7", "min9", "min11", "min11(b13)"],
-    vii: ["dim", "min7(b5)", "min7(b5, b9)", "min11(b5, b9)", "min11(b5, b9, b13)"]
-  }
+chordObject.prototype.ivArray = function() {
+  this.chords.push(scaleChords.iv);
+}
+
+chordObject.prototype.vArray = function() {
+  this.chords.push(scaleChords.v);
+}
+
+chordObject.prototype.viArray = function() {
+  this.chords.push(scaleChords.vi);
+}
+
+chordObject.prototype.viiArray = function() {
+  this.chords.push(scaleChords.vii);
+}
+
+var scaleChords = {
+  i: ["maj", "maj7", "maj9", "maj11", "maj13"],
+  ii: ["min", "min7", "min9", "min11", "min13"],
+  iii: ["min", "min7", "min7(b9)", "min11(b9)", "min11 (b9, b13)"],
+  iv: ["maj", "maj7", "maj9", "maj9(#11)", "maj13(#11)"],
+  v: ["maj", "7", "9", "11", "13"],
+  vi: ["min", "min7", "min9", "min11", "min11(b13)"],
+  vii: ["dim", "min7(b5)", "min7(b5, b9)", "min11(b5, b9)", "min11(b5, b9, b13)"]
+}
 
 // UI LOGIC
 
 $(document).ready(function() {
   $("form#notescaleinput").submit(function(event) {
-    event.preventDefault();
+  event.preventDefault();
 
-    var noteInput = $(".note").val();
-    var scaleInput = $(".scale").val();
+  var noteInput = $(".note").val();
+  var scaleInput = $(".scale").val();
 
-    var chromaticNotes = noteMachine(noteInput)
-    var newScale = scaleMachine(chromaticNotes, scaleInput)
+  var chromaticNotes = noteMachine(noteInput)
+  var newScale = scaleMachine(chromaticNotes, scaleInput)
 
-    // var triads = triadMachine(scaleInput)
-    // var sevenths = seventhsMachine(scaleInput)
-    // var ninths = ninthsMachine(scaleInput)
-    // var elevenths = eleventhsMachine(scaleInput)
-    // var thirteenths = thirteenthsMachine(scaleInput)
+  var i = new chordObject(newScale[0])
+  var ii = new chordObject(newScale[1])
+  var iii = new chordObject(newScale[2])
+  var iv = new chordObject(newScale[3])
+  var v = new chordObject(newScale[4])
+  var vi = new chordObject(newScale[5])
+  var vii = new chordObject(newScale[6])
 
-    // var scaleObject = scaleDegreeMachine(newScale);
+  if (scaleInput === "Major") {
+    i.iArray();
+    ii.iiArray();
+    iii.iiiArray();
+    iv.ivArray();
+    v.vArray();
+    vi.viArray();
+    vii.viiArray();
+  } else if (scaleInput === "Dorian") {
+    i.iiArray();
+    ii.iiiArray();
+    iii.ivArray();
+    iv.vArray();
+    v.viArray();
+    vi.viiArray();
+    vii.iArray();
+  } else if (scaleInput === "Phrygian") {
+    i.iiiArray();
+    ii.ivArray();
+    iii.vArray();
+    iv.viArray();
+    v.viiArray();
+    vi.iArray();
+    vii.iiArray();
+  } else if (scaleInput === "Lydian") {
+    i.ivArray();
+    ii.vArray();
+    iii.viArray();
+    iv.viiArray();
+    v.iArray();
+    vi.iiArray();
+    vii.iiiArray();
+  } else if (scaleInput === "Mixolydian") {
+    i.vArray();
+    ii.viArray();
+    iii.viiArray();
+    iv.iArray();
+    v.iiArray();
+    vi.iiiArray();
+    vii.ivArray();
+  } else if (scaleInput === "Aeolian") {
+    i.viArray();
+    ii.viiArray();
+    iii.iArray();
+    iv.iiArray();
+    v.iiiArray();
+    vi.ivArray();
+    vii.vArray();
+  } else if (scaleInput === "Locrian") {
+    i.viiArray();
+    ii.iArray();
+    iii.iiArray();
+    iv.iiiArray();
+    v.ivArray();
+    vi.vArray();
+    vii.viArray();
+  }
 
-    $("#noteI").text(newScale[0])
-    $("#noteII").text(newScale[1])
-    $("#noteIII").text(newScale[2])
-    $("#noteIV").text(newScale[3])
-    $("#noteV").text(newScale[4])
-    $("#noteVI").text(newScale[5])
-    $("#noteVII").text(newScale[6])
+  $("#noteI").text(i.noteName)
+  $("#noteII").text(ii.noteName)
+  $("#noteIII").text(iii.noteName)
+  $("#noteIV").text(iv.noteName)
+  $("#noteV").text(v.noteName)
+  $("#noteVI").text(vi.noteName)
+  $("#noteVII").text(vii.noteName)
 
-    $(".results").show();
+  $("#chordsI").text(i.chords)
+  $("#chordsII").text(ii.chords)
+  $("#chordsIII").text(iii.chords)
+  $("#chordsIV").text(iv.chords)
+  $("#chordsV").text(v.chords)
+  $("#chordsVI").text(vi.chords)
+  $("#chordsVII").text(vii.chords)
 
-    // $(".results").text(scaleObject);
-    });
+  $(".results").show();
   });
+});
