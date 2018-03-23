@@ -20,6 +20,13 @@ td {
   padding-right: 20px;
 }
 
+.openstring {
+  border: 1px;
+  border-right: 4px solid black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 th {
   border: 1px;
   padding-right: 20px;
