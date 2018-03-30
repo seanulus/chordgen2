@@ -174,16 +174,16 @@ $(document).ready(function() {
   }
 
   $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").text("")
-  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").removeClass("red")
+  // $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").removeClass("red")
 
-  $("." + i.noteName).text("O");
-  $("." + i.noteName).addClass("red");
-  $("." + ii.noteName).text("O");
-  $("." + iii.noteName).text("O");
-  $("." + iv.noteName).text("O");
-  $("." + v.noteName).text("O");
-  $("." + vi.noteName).text("O");
-  $("." + vii.noteName).text("O");
+  $("." + i.noteName).text("🔴");
+  // $("." + i.noteName).addClass("red");
+  $("." + ii.noteName).text("⚫️");
+  $("." + iii.noteName).text("⚫️");
+  $("." + iv.noteName).text("⚫️");
+  $("." + v.noteName).text("⚫️");
+  $("." + vi.noteName).text("⚫️");
+  $("." + vii.noteName).text("⚫️");
 
   $("#noteI").text(i.noteName)
   $("#noteII").text(ii.noteName)
@@ -202,5 +202,18 @@ $(document).ready(function() {
   $("#chordsVII").text(vii.chords)
 
   $(".results").show();
+  });
+
+  $("#togglescalenotes").click(function(event) {
+    event.preventDefault();
+
+    $("." + i.noteName).text(i.noteName);
+    $("." + ii.noteName).text(i.noteName);
+    $("." + iii.noteName).text(i.noteName);
+    $("." + iv.noteName).text(i.noteName);
+    $("." + v.noteName).text(i.noteName);
+    $("." + vi.noteName).text(i.noteName);
+    $("." + vii.noteName).text(i.noteName);
+
   });
 });

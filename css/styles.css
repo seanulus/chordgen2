@@ -7,10 +7,10 @@
 }
 
 table {
-  table-layout: fixed;
-  width: 100%
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  text-align: center;
 }
 
 td {
@@ -20,11 +20,9 @@ td {
   border-right: 2px solid black;
   padding-left: 20px;
   padding-right: 20px;
-  width: 30px;
-}
-
-.fretboard-rows {
-  width: 5%
+  /* width: 30px; */
+  text-align: center;
+  background-color: #ffe699
 }
 
 .openstring {
@@ -35,9 +33,10 @@ td {
 }
 
 th {
+  width: 5%;
   border: 1px;
   padding-right: 20px;
-  text-align: right;
+  text-align: center;
 }
 
 .red {
