@@ -174,8 +174,10 @@ $(document).ready(function() {
   }
 
   $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").text("")
+  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").removeClass("red")
 
   $("." + i.noteName).text("O");
+  $("." + i.noteName).addClass("red");
   $("." + ii.noteName).text("O");
   $("." + iii.noteName).text("O");
   $("." + iv.noteName).text("O");
