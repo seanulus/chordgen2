@@ -1,7 +1,7 @@
 // BUSINESS LOGIC
 
 function noteMachine(noteInput) {
-  var notes = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"];
+  var notes = ["A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab", "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"];
   function findRoot(note) {
     return note === noteInput; // making sure the inputted note will match with a note in the array
   }
@@ -172,6 +172,16 @@ $(document).ready(function() {
     vi.vArray();
     vii.viArray();
   }
+
+  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").text("")
+
+  $("." + i.noteName).text("O");
+  $("." + ii.noteName).text("O");
+  $("." + iii.noteName).text("O");
+  $("." + iv.noteName).text("O");
+  $("." + v.noteName).text("O");
+  $("." + vi.noteName).text("O");
+  $("." + vii.noteName).text("O");
 
   $("#noteI").text(i.noteName)
   $("#noteII").text(ii.noteName)
