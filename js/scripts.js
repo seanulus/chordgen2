@@ -202,7 +202,7 @@ $(document).ready(function() {
   $(".results").show();
   });
 
-  $("td").click(function() {
+  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").click(function() {
     $(this).toggleClass("highlight")
   });
   $("#togglescalenotes").click(function(event) {
