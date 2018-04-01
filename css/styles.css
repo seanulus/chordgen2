@@ -1,7 +1,3 @@
-#chordsI, #chordsII, #chordsIII, #chordsIV, #chordsV, #chordsVI, #chordsVII {
-  text
-}
-
 #noteI, #noteII, #noteIII, #noteIV, #noteV, #noteVI, #noteVII {
   font-size: 20px;
 }
@@ -22,7 +18,8 @@ td {
   padding-right: 20px;
   /* width: 30px; */
   text-align: center;
-  background-color: #ffe699
+  background-color: #ffe699;
+  cursor: pointer;
 }
 
 .openstring {
@@ -43,6 +40,9 @@ th {
   color: red;
 }
 
-.results {
-  display: none;
+.highlight {
+  background-color: yellow;
 }
+/* .results {
+  display: none;
+} */

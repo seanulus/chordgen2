@@ -174,10 +174,8 @@ $(document).ready(function() {
   }
 
   $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").text("")
-  // $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").removeClass("red")
 
   $("." + i.noteName).text("🔴");
-  // $("." + i.noteName).addClass("red");
   $("." + ii.noteName).text("⚫️");
   $("." + iii.noteName).text("⚫️");
   $("." + iv.noteName).text("⚫️");
@@ -204,16 +202,33 @@ $(document).ready(function() {
   $(".results").show();
   });
 
+  $("td").click(function() {
+    $(this).toggleClass("highlight")
+  });
   $("#togglescalenotes").click(function(event) {
     event.preventDefault();
 
-    $("." + i.noteName).text(i.noteName);
-    $("." + ii.noteName).text(i.noteName);
-    $("." + iii.noteName).text(i.noteName);
-    $("." + iv.noteName).text(i.noteName);
-    $("." + v.noteName).text(i.noteName);
-    $("." + vi.noteName).text(i.noteName);
-    $("." + vii.noteName).text(i.noteName);
+    // var noteInput = $(".note").val();
+    // var scaleInput = $(".scale").val();
+    //
+    // var chromaticNotes = noteMachine(noteInput)
+    // var newScale = scaleMachine(chromaticNotes, scaleInput)
+    //
+    // var i = new chordObject(newScale[0])
+    // var ii = new chordObject(newScale[1])
+    // var iii = new chordObject(newScale[2])
+    // var iv = new chordObject(newScale[3])
+    // var v = new chordObject(newScale[4])
+    // var vi = new chordObject(newScale[5])
+    // var vii = new chordObject(newScale[6])
+    //
+    // $("." + i.noteName).text(i.noteName);
+    // $("." + ii.noteName).text(ii.noteName);
+    // $("." + iii.noteName).text(iii.noteName);
+    // $("." + iv.noteName).text(iv.noteName);
+    // $("." + v.noteName).text(v.noteName);
+    // $("." + vi.noteName).text(vi.noteName);
+    // $("." + vii.noteName).text(vii.noteName);
 
   });
 });
