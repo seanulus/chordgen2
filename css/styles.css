@@ -16,7 +16,6 @@ td {
   border-right: 2px solid black;
   padding-left: 20px;
   padding-right: 20px;
-  /* width: 30px; */
   text-align: center;
   background-color: #ffe699;
   cursor: pointer;
@@ -43,6 +42,6 @@ th {
 .highlight {
   background-color: yellow;
 }
-/* .results {
+.results {
   display: none;
-} */
+}

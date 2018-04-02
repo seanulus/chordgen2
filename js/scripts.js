@@ -199,36 +199,56 @@ $(document).ready(function() {
   $("#chordsVI").text(vi.chords)
   $("#chordsVII").text(vii.chords)
 
+  $("#chord").text(i.noteName + ", " + iii.noteName + ", " + v.noteName);
+
   $(".results").show();
   });
 
-  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").click(function() {
-    $(this).toggleClass("highlight")
+  $(".A").click(function() {
+    $(".A").toggleClass("highlight")
   });
-  $("#togglescalenotes").click(function(event) {
-    event.preventDefault();
 
-    // var noteInput = $(".note").val();
-    // var scaleInput = $(".scale").val();
-    //
-    // var chromaticNotes = noteMachine(noteInput)
-    // var newScale = scaleMachine(chromaticNotes, scaleInput)
-    //
-    // var i = new chordObject(newScale[0])
-    // var ii = new chordObject(newScale[1])
-    // var iii = new chordObject(newScale[2])
-    // var iv = new chordObject(newScale[3])
-    // var v = new chordObject(newScale[4])
-    // var vi = new chordObject(newScale[5])
-    // var vii = new chordObject(newScale[6])
-    //
-    // $("." + i.noteName).text(i.noteName);
-    // $("." + ii.noteName).text(ii.noteName);
-    // $("." + iii.noteName).text(iii.noteName);
-    // $("." + iv.noteName).text(iv.noteName);
-    // $("." + v.noteName).text(v.noteName);
-    // $("." + vi.noteName).text(vi.noteName);
-    // $("." + vii.noteName).text(vii.noteName);
+  $(".Bb").click(function() {
+    $(".Bb").toggleClass("highlight")
+  });
 
+  $(".B").click(function() {
+    $(".B").toggleClass("highlight")
+  });
+
+  $(".C").click(function() {
+    $(".C").toggleClass("highlight")
+  });
+
+  $(".Db").click(function() {
+    $(".Db").toggleClass("highlight")
+  });
+
+  $(".D").click(function() {
+    $(".D").toggleClass("highlight")
+  });
+
+  $(".Eb").click(function() {
+    $(".Eb").toggleClass("highlight")
+  });
+
+  $(".E").click(function() {
+    $(".E").toggleClass("highlight")
+  });
+
+  $(".F").click(function() {
+    $(".F").toggleClass("highlight")
+  });
+
+  $(".Gb").click(function() {
+    $(".Gb").toggleClass("highlight")
+  });
+
+  $(".G").click(function() {
+    $(".G").toggleClass("highlight")
+  });
+
+  $(".Ab").click(function() {
+    $(".Ab").toggleClass("highlight")
   });
 });
