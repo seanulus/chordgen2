@@ -103,6 +103,7 @@ $(document).ready(function() {
 
   var noteInput = $(".note").val();
   var scaleInput = $(".scale").val();
+  var fretboardInput = $(".fretboard").val();
 
   var chromaticNotes = noteMachine(noteInput)
   var newScale = scaleMachine(chromaticNotes, scaleInput)
@@ -173,15 +174,27 @@ $(document).ready(function() {
     vii.viArray();
   }
 
-  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").text("")
+  $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").empty()
 
-  $("." + i.noteName).text("🔴");
-  $("." + ii.noteName).text("⚫️");
-  $("." + iii.noteName).text("⚫️");
-  $("." + iv.noteName).text("⚫️");
-  $("." + v.noteName).text("⚫️");
-  $("." + vi.noteName).text("⚫️");
-  $("." + vii.noteName).text("⚫️");
+  if (fretboardInput === "Note Names") {
+    $("#dotkey").hide();
+    $("." + i.noteName).text(i.noteName);
+    $("." + ii.noteName).text(ii.noteName);
+    $("." + iii.noteName).text(iii.noteName);
+    $("." + iv.noteName).text(iv.noteName);
+    $("." + v.noteName).text(v.noteName);
+    $("." + vi.noteName).text(vi.noteName);
+    $("." + vii.noteName).text(vii.noteName);
+  } else {
+    $("#dotkey").show();
+    $("." + i.noteName).text("🔴");
+    $("." + ii.noteName).text("⚫️");
+    $("." + iii.noteName).text("⚫️");
+    $("." + iv.noteName).text("⚫️");
+    $("." + v.noteName).text("⚫️");
+    $("." + vi.noteName).text("⚫️");
+    $("." + vii.noteName).text("⚫️");
+  }
 
   $("#noteI").text(i.noteName)
   $("#noteII").text(ii.noteName)
@@ -198,8 +211,6 @@ $(document).ready(function() {
   $("#chordsV").text(v.chords)
   $("#chordsVI").text(vi.chords)
   $("#chordsVII").text(vii.chords)
-
-  $("#chord").text(i.noteName + ", " + iii.noteName + ", " + v.noteName);
 
   $(".results").show();
   });

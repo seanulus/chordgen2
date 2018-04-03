@@ -4,8 +4,6 @@
 
 table {
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   text-align: center;
 }
 
@@ -16,16 +14,12 @@ td {
   border-right: 2px solid black;
   padding-left: 20px;
   padding-right: 20px;
-  text-align: center;
   background-color: #ffe699;
+  text-align: center;
   cursor: pointer;
-}
-
-.openstring {
-  border: 1px;
-  border-right: 4px solid black;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-weight: bold;
 }
 
 th {
@@ -35,13 +29,10 @@ th {
   text-align: center;
 }
 
-.red {
-  color: red;
-}
-
 .highlight {
   background-color: yellow;
 }
+
 .results {
   display: none;
 }
