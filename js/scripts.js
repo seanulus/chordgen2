@@ -173,7 +173,7 @@ $(document).ready(function() {
     vi.vArray();
     vii.viArray();
   }
-
+  $("#chordsI, #chordsII, #chordsIII, #chordsIV, #chordsV, #chordsVI, #chordsVII").empty();
   $(".A, .Bb, .B, .C, .Db, .D, .Eb, .E, .F, .Gb, .G, .Ab").empty()
 
   if (fretboardInput === "Note Names") {
@@ -204,13 +204,27 @@ $(document).ready(function() {
   $("#noteVI").text(vi.noteName)
   $("#noteVII").text(vii.noteName)
 
-  $("#chordsI").text(i.chords)
-  $("#chordsII").text(ii.chords)
-  $("#chordsIII").text(iii.chords)
-  $("#chordsIV").text(iv.chords)
-  $("#chordsV").text(v.chords)
-  $("#chordsVI").text(vi.chords)
-  $("#chordsVII").text(vii.chords)
+  i.chords[0].map(function(chord) {
+    $("#chordsI").append("<li>" + i.noteName + chord + "</li>");
+  });
+  ii.chords[0].map(function(chord) {
+    $("#chordsII").append("<li>" + ii.noteName + chord + "</li>");
+  });
+  iii.chords[0].map(function(chord) {
+    $("#chordsIII").append("<li>" + iii.noteName + chord + "</li>");
+  });
+  iv.chords[0].map(function(chord) {
+    $("#chordsIV").append("<li>" + iv.noteName + chord + "</li>");
+  });
+  v.chords[0].map(function(chord) {
+    $("#chordsV").append("<li>" + v.noteName + chord + "</li>");
+  });
+  vi.chords[0].map(function(chord) {
+    $("#chordsVI").append("<li>" + vi.noteName + chord + "</li>");
+  });
+  vii.chords[0].map(function(chord) {
+    $("#chordsVII").append("<li>" + vii.noteName + chord + "</li>");
+  });
 
   $(".results").show();
   });

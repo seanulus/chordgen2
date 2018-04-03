@@ -1,5 +1,6 @@
 #noteI, #noteII, #noteIII, #noteIV, #noteV, #noteVI, #noteVII {
   font-size: 20px;
+  text-align: center;
 }
 
 table {
@@ -27,6 +28,33 @@ th {
   border: 1px;
   padding-right: 20px;
   text-align: center;
+}
+
+h3 {
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.col-md-1 {
+  margin-left: 40px;
+}
+
+.col-md-12 {
+  text-align: center;
+}
+
+.btn {
+  border: solid black 2px;
+  margin-top: 10px;
 }
 
 .highlight {
