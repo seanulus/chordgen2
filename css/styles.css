@@ -40,6 +40,10 @@ h1, h2, h3 {
   text-align: center;
 }
 
+h5 {
+  font-weight:bold;
+}
+
 ul {
   list-style-type: none;
   padding: 0px;
@@ -71,18 +75,26 @@ ul {
   height: 270px;
 }
 
-.col-md-3, .col-md-6 {
+.col-md-6 {
   border: solid #dbad67 3px;
   border-radius: 5px;
+  padding: 10px;
+  margin-left: 150px;
+  background-color: #ffe699;
+}
+
+.col-md-3 {
+  border: solid #dbad67 3px;
+  border-radius: 5px;
+  width: 180px;
+  text-align: center;
   padding: 10px;
   margin-left: 98px;
   background-color: #ffe699;
 }
 
-
 .btn {
   margin-top: 10px;
-  margin-left: 90px;
 }
 
 .highlight {
