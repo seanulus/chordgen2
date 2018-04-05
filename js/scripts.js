@@ -225,9 +225,7 @@ $(document).ready(function() {
   vii.chords[0].map(function(chord) {
     $("#chordsVII").append("<li>" + vii.noteName + chord + "</li>");
   });
-
-  $(".results").show();
-  });
+});
 
   $(".A").click(function() {
     $(".A").toggleClass("highlight")

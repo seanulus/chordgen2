@@ -11,8 +11,13 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <h1>Magical Chord Generator</h1>
+        <div class="header">
+          <h1>Chordgen 2.0</h1>
+          <h2>Fretboard Chord/Scale Generator</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
           <form id="notescaleinput">
             <h5>Key:</h5>
             <select class="note">
@@ -47,7 +52,17 @@
             <button type="submit" class="btn btn-danger">Submit</button>
           </form>
         </div>
-        <div class="results">
+        <div class="col-md-6">
+          <h4>Chordgen 2.0 was developed for musicians by musicians.</h4>
+
+          <p><strong>Instructions:</strong> Pick a key and scale and hit submit. Git Fiddle will generate a virtual fretboard containing all scale tones of that key. It will also generate a list of chords with extensions pertaining to each scale degree.</p>
+
+          <p>You may also select whether the virtual fretboard displays each scale tone as red/black dots or note names. Red dots (🔴) indicate the rootnote and black dots (⚫️) indicate the scale tones.</p>
+
+          <p>This app was developed using JavaScript and jQuery.</p>
+        </div>
+      </div>
+        <div class="row">
           <div class="col-md-1">
             <h3>I</h3>
             <p id="noteI" class="center"></p>
@@ -84,10 +99,6 @@
             <ul id="chordsVII"></ul>
           </div>
           <div class="col-md-12">
-            <br>
-            <br>
-            <br>
-            <h5>Fretboard:</h5>
             <table>
               <tr>
                 <th style="border-right: 7px solid black">E</th>
@@ -216,11 +227,9 @@
                 <th>15</th>
               </tr>
             </table>
-            <p>Click on any note to highlight its position across the fretboard.</p>
-            <div id="dotkey">
-              <p>🔴 Root Note</p>
-              <p>⚫️ Scale Tones</p>
-            </div>
+            <br>
+            <p class="center">Click on any note to highlight its position across the fretboard.</p>
+            <p class="center"><em>Copyright © 2018 Jake Soffer and Sean McDermott</em></p>
           </div>
         </div>
       </div>
