@@ -13,6 +13,7 @@ _This application serves as a music theory resource for guitarists and musicians
 * _It can display each of the seven note values of the diatonic scale, as selected by the user._
 * _It can display the appropriate chord extensions for each scale degree of the diatonic scale, as selected by the user._
 * _It can display a virtual fretboard populated with either dots or note names of each scale tone of the diatonic scale, as selected by the user._
+* _It can click-highlight each of a selected note across the fretboard._
 
 ## Setup/Installation Requirements
 
