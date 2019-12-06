@@ -2,6 +2,8 @@
 
 #### _A music theory resource developed for musicians by musicians. Current version: April 2018_
 
+This sit can be seen live at https://seanulus.github.io/chordgen2/
+
 #### By _**Jake Soffer and Sean McDermott**_
 
 ## Description
